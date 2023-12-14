@@ -30,7 +30,6 @@ echo "Possuem " . $i . " caracteres";
 }
 }
 
-
 ?>
 </body>
 </html>

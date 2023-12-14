@@ -83,12 +83,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $n3 = $_POST["n3"];
         $n4 = $_POST["n4"];
         $n5 = $_POST["n5"];
-        $numeros = array($n1, $n2, $n3, $n4, $n5);
-
-        
-        $numerosOrdenados = bubbleSort($numeros);
-
-        
+        $numeros = array($n1, $n2, $n3, $n4, $n5);       
+        $numerosOrdenados = bubbleSort($numeros);     
         foreach ($numerosOrdenados as $numero) {
             echo $numero . ' ';
         }
