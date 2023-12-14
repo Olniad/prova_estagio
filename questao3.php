@@ -19,10 +19,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $caracteres = $_POST["caracteres"];
     echo "Voce digitou: ".$caracteres."<br>"; 
     echo "Possuem ".strlen($caracteres)." caracteres.<br>(contando com o espaço).";
+
+    echo"<br>ALGORITMO: <br>";
+
+for ($i = 0; isset($caracteres[$i]); $i++) {
+}
+echo "Possuem " . $i . " caracteres";
 }else{
     echo"algo deu errado, confira de novo.";
 }
 }
+
+
 ?>
 </body>
 </html>

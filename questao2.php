@@ -50,6 +50,59 @@
         echo"verifique os valores digitados.";
     }
 }
-    ?>
+
+Echo "ALGORITMO <br>";
+
+function bubbleSort($array) {
+    $n = count($array);
+
+    for ($i = 0; $i < $n - 1; $i++) {
+        for ($j = 0; $j < $n - $i - 1; $j++) {
+            if ($array[$j] > $array[$j + 1]) {
+                
+                $temp = $array[$j];
+                $array[$j] = $array[$j + 1];
+                $array[$j + 1] = $temp;
+            }
+        }
+    }
+
+    return $array;
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (
+        isset($_POST["n1"]) && !empty($_POST["n1"]) &&
+        isset($_POST["n2"]) && !empty($_POST["n2"]) &&
+        isset($_POST["n3"]) && !empty($_POST["n3"]) &&
+        isset($_POST["n4"]) && !empty($_POST["n4"]) &&
+        isset($_POST["n5"]) && !empty($_POST["n5"])
+    ) {
+        $n1 = $_POST["n1"];
+        $n2 = $_POST["n2"];
+        $n3 = $_POST["n3"];
+        $n4 = $_POST["n4"];
+        $n5 = $_POST["n5"];
+        $numeros = array($n1, $n2, $n3, $n4, $n5);
+
+        
+        $numerosOrdenados = bubbleSort($numeros);
+
+        
+        foreach ($numerosOrdenados as $numero) {
+            echo $numero . ' ';
+        }
+        echo "<br>Valores em ordem crescente dentro de uma lista.";
+        echo" <main>";
+        echo "<ol>";     
+        foreach ($numerosOrdenados as $numero) {
+        echo "<li>$numero</li>";
+        }
+        echo "</ol>";
+        echo "</main>";
+    }
+}
+
+?>
 </body>
 </html>
