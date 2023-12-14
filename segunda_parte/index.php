@@ -34,7 +34,7 @@ $reg = $conexao->executeSelect("select * from livros");
 <body>
 <body>
     <div class="container">
-        <h2 class="text-center"> Lista de Livros <i class="bi bi-people-fill"></i></h2>
+        <h2 class="text-center"> Lista de Livros <i class="bi bi-book"></i></h2>
         <h5 class="text-end">
             <a href="registrar.php" class="btn btn-primary btn-xs">
                 <i class="bi bi-person-plus-fill"></i>
